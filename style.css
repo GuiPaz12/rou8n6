@@ -1,19 +1,91 @@
-/* Estilo do botão de baixar confirmações */
+/* Fonte personalizada (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Estilo global */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando o botão inspirado nos guardas */
 #downloadButton {
     display: block;
     width: 100%;
+    max-width: 250px;
     padding: 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #a50000, #ff0000);
+    color: white;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     text-transform: uppercase;
-    margin-top: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
 }
 
+/* Efeito neon ao passar o mouse */
 #downloadButton:hover {
-    background-color: #555;
+    background: linear-gradient(135deg, #ff0000, #a50000);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+/* Efeito de brilho ao clicar */
+#downloadButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+}
+
+/* Estilizando a página de fundo como uma grade (inspirada na série) */
+.grid-background {
+    background-image: url('guard.png'); /* Usa a imagem dos guardas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Estilizando o título */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Estilizando outros textos */
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Adicionando uma animação para simular luz piscando */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7); }
+    50% { text-shadow: -2px -2px 5px rgba(255, 0, 0, 0.7); }
+    100% { text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7); }
+}
+
+/* Aplicando o efeito de glitch ao título */
+h1 {
+    animation: glitch 0.8s infinite alternate;
 }
