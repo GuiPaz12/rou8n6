@@ -1,0 +1,19 @@
+/* Estilo do botão de baixar confirmações */
+#downloadButton {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#downloadButton:hover {
+    background-color: #555;
+}
